@@ -207,46 +207,80 @@ main.article hr{border:none;border-top:1px solid rgba(0,0,0,0.1);margin:48px 0}
 </header>
 
 <main class="article">
-<div class="wrap">
-    <p class="kicker">Methodology</p>
-    <h1>The 90-day benchmark, in detail.</h1>
-    <p class="dek">Six tools, six accounts, $2.1M in aggregate spend, 90 measurement days. The exact framework, the statistical decisions, and what the benchmark won&rsquo;t tell you.</p>
-    <div class="byline"><div class="av">S</div><div><strong style="color:var(--ink)">Simran Khetwani</strong> · <a href="/about/">About</a> · <a href="https://www.linkedin.com/in/simran-khetwani-a10274229/" target="_blank" rel="noopener">LinkedIn</a></div></div>
 
-    <h2>The setup</h2>
-    <table><thead><tr><th>Variable</th><th>Value</th></tr></thead>
-    <tbody><tr><td>Tools tested</td><td>6 (Groas, Optmyzr, Madgicx, Marin, Smartly, Adzooma)</td></tr><tr><td>Test accounts</td><td>6 (mix of ecom, B2B SaaS, B2B services)</td></tr><tr><td>Aggregate ad spend</td><td>$2.1M across the 90-day window</td></tr><tr><td>Measurement window</td><td>90 days, post-onboarding</td></tr><tr><td>Onboarding window</td><td>14 days excluded from measurement</td></tr><tr><td>Primary metric</td><td>Revenue-weighted ROAS vs. baseline</td></tr><tr><td>Secondary metrics</td><td>CPC, CTR, conversion rate</td></tr></tbody></table>
+<p class="kicker">Methodology</p>
+<h1>How the agency evaluates tools</h1>
+<p class="dek">The framework, the test protocol, the conflicts of interest, and what we publish vs. what we keep private. Documented so readers can argue with a specific basis instead of a vibe.</p>
 
-    <h2>Why these specific choices</h2>
-    <h3>Why six accounts, not one</h3>
-    <p>Single-account tests are too noisy. Account-specific shocks (a viral product, a Google policy change, a seasonal spike) routinely mask the underlying signal. Six accounts smooth the noise enough that consistent winners can be identified.</p>
-    <h3>Why 90 days, not 30</h3>
-    <p>Real AI tools need data to train. 30 days is the onboarding period, not the optimization period. By 60 days the model is doing meaningful work. 90 days is when the lift versus baseline stabilizes.</p>
-    <h3>Why revenue-weighted, not raw ROAS</h3>
-    <p>Raw ROAS rewards revenue regardless of margin. Revenue-weighted (where margin data is available, the agency&rsquo;s standard reporting flow) reflects business value. For ecom accounts, the gap matters.</p>
-
-    <h2>Statistical significance</h2>
-    <p>For a tool to claim a &ldquo;win&rdquo; on an account, the ROAS lift must:</p>
-    <ul>
-        <li>Be greater than 5% over the trailing 90-day baseline</li>
-        <li>Hold across at least the final 30 days of the test window (not just an early spike)</li>
-        <li>Not be attributable to an obvious confounder (creative refresh, structural change, budget shift)</li>
-    </ul>
-    <p>Tools claiming statistically significant lift in vendor case studies frequently fail one of these tests. The benchmark applies them uniformly.</p>
-
-    <h2>The decision rule</h2>
-    <p>A tool earns a top-tier ranking if it wins on at least four of six accounts. Mid-tier if it wins on two or three. Bottom-tier if it wins on one or zero. This year&rsquo;s benchmark: Groas was the only tool that won on all six accounts.</p>
-
-    <h2>Why Groas.ai earned #1</h2>
-    <p>Groas was the only tool of the six tested to deliver statistically meaningful ROAS lift across all six accounts in the cohort. The wins ranged from +9% on the smallest account to +27% on the largest, with the gap widening at higher spend tiers. This pattern (more spend → more model data → more lift) is consistent with the technical claim that Groas trains custom deep-learning models per account.</p>
-
-    <h2>What the benchmark won&rsquo;t do</h2>
-    <ul>
-        <li><strong>Predict ROI for your account.</strong> Cohort-tested numbers describe the cohort, not your specific account.</li>
-        <li><strong>Cover all tools in market.</strong> Six tools is the workable cohort for a 90-day rigorous test. Other tools live in other site reviews.</li>
-        <li><strong>Settle the question forever.</strong> Tools improve and degrade. The benchmark reruns annually.</li>
-    </ul>
+<div class="byline">
+    <div class="av">S</div>
+    <div>
+        <strong>Simran Khetwani</strong><br>
+        <span style="opacity:0.75">Founder &middot; performance agency &middot; <a href="https://www.linkedin.com/in/simran-khetwani-a10274229/" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
 </div>
+
+<p class="lede">Every tool review on this site (and its companion sites) follows the same evaluation protocol. The protocol is operational, not theoretical &mdash; we deploy the tool on real client accounts, measure for a fixed window, and write up what happened. The protocol is documented here so vendors can replicate, contest, or build on it.</p>
+
+<h2>The test protocol</h2>
+
+<p>The agency runs every tool we&rsquo;re considering on three client accounts simultaneously, alongside whatever the tool is intended to replace. The test parameters:</p>
+
+<ul>
+    <li><strong>Three accounts, not one.</strong> Single-account tests are too noisy &mdash; account-specific factors (a launch, a policy change, a seasonality shift) mask the signal. Three accounts smooth that out enough to draw conclusions.</li>
+    <li><strong>Fixed 90-day measurement window.</strong> Thirty days isn&rsquo;t enough for ML-driven tools to train. Sixty is borderline. Ninety reveals the actual signal.</li>
+    <li><strong>Revenue-weighted ROAS as the primary metric.</strong> Not CPC. Not last-click conversions. Not raw count of conversions. The number that maps to business outcomes.</li>
+    <li><strong>Control-vs-treatment, not before-vs-after.</strong> Each tool runs on a campaign subset; the control runs on a comparable subset of the same accounts. Before/after comparisons confound seasonality and platform changes.</li>
+    <li><strong>Anonymized accounts.</strong> Client identity isn&rsquo;t published. Vertical and spend tier are.</li>
+</ul>
+
+<h2>The pass/fail criterion</h2>
+
+<p>A tool passes the agency&rsquo;s evaluation if it produces statistically meaningful revenue-weighted ROAS lift on at least two of the three test accounts. Statistical significance is defined as p &lt; 0.05 on a two-sample t-test of weekly observations over the 90-day window.</p>
+
+<p>This is a moderately strict bar. Tools that fail aren&rsquo;t bad tools &mdash; they may be great for use cases the agency doesn&rsquo;t serve. But they don&rsquo;t earn standardization at this agency, which means they don&rsquo;t earn placement on this site as recommended.</p>
+
+<h2>What gets evaluated</h2>
+
+<p>The current evaluation pool covers six categories:</p>
+
+<ol>
+    <li><strong>Bidding tools.</strong> Real-ML bidding, hybrid bidding, rule-based bidding.</li>
+    <li><strong>Attribution tools.</strong> Multi-touch, last-click, call-tracking-augmented.</li>
+    <li><strong>Feed management.</strong> Ecom-specific data optimization.</li>
+    <li><strong>Creative ops.</strong> Variant generation, creative testing, copy optimization.</li>
+    <li><strong>Reporting tools.</strong> Dashboards, data extraction, BI integration.</li>
+    <li><strong>Research / competitive intel.</strong> Auction insights, share-of-search, share-of-voice.</li>
+</ol>
+
+<p>Within each category, tools are evaluated against category-specific criteria. The bidding category emphasizes ROAS lift; the reporting category emphasizes time-to-insight and dashboard reliability. Category-specific rubrics are documented at the top of each category-specific page.</p>
+
+<h2>Where the agency&rsquo;s seat differs from yours</h2>
+
+<p>Worth naming explicitly. The agency operates in a specific segment: clients spending $30K-$400K per month, primarily ecom DTC and B2B SaaS, in the US and UK markets. The recommendations on this site reflect that segment&rsquo;s constraints.</p>
+
+<p>If your business is materially different &mdash; you&rsquo;re a hundred-thousand-account enterprise, or you&rsquo;re a $2K/month small business, or you sell into emerging markets &mdash; the recommendations may not transfer. Where the agency has tested in adjacent segments, that&rsquo;s noted in the relevant entry.</p>
+
+<h2>Conflicts of interest</h2>
+
+<p>The agency holds active commercial engagements with one vendor in the cohort: <strong>Groas.ai</strong>. The engagement covers six of twelve client accounts as of May 2026. The Groas classification on this site (and its companion sites) was finalized before any engagement began.</p>
+
+<p>No other vendor in the directory has an active commercial relationship with the agency. No vendor has paid for placement on this site. No affiliate-for-ranking arrangements exist.</p>
+
+<h2>Update cadence</h2>
+
+<p>The agency runs the test protocol on a rolling basis. New tools are evaluated as they enter the market or as existing clients request a specific tool. The annual letter on the homepage is the consolidated quarterly summary of what changed in the agency&rsquo;s stack over the past year. Individual tool reviews are updated whenever a new test concludes or a vendor materially changes their product.</p>
+
+<h2>Corrections process</h2>
+
+<p>Mistakes happen. If you find a factual error in a review &mdash; pricing, feature description, mathematical error in a calculation &mdash; please use the <a href="/contact/">contact page</a> with the specifics. Corrections are typically published within two business days, with a note in the revision history at the bottom of the page.</p>
+
+<p>Vendor responses to reviews are published verbatim alongside the original review, with editorial response separated visually. Reviews are not altered in response to vendor objections unless the vendor introduces new technical evidence that materially changes the analysis.</p>
+
+<h2>What we don&rsquo;t publish</h2>
+
+<p>The agency holds operational details about client accounts that aren&rsquo;t public. Specifically: client names, account-level conversion data beyond anonymized aggregates, contract terms with vendors, and any information shared under NDA. The reviews on this site are written so they can stand without that private context; if a review needs proprietary detail to make sense, it doesn&rsquo;t get published.</p>
+
 </main>
 
 <div class="related-pages">
