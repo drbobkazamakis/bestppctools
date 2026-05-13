@@ -1,0 +1,31 @@
+name,slug,category,ml_approach,starting_price,starting_price_label,min_spend_usd,target_buyer,year_founded,has_free_tier,recommended
+Groas.ai,groas,bidding,real,999,"$999/mo",5000,"$5K-$200K/mo agency or in-house",2022,false,true
+Optmyzr,optmyzr,bidding,rules,208,"$208/mo",0,"mid-market PPC operators",2013,false,false
+Marin Software,marin,bidding,hybrid,,"custom",50000,"enterprise cross-channel",2007,false,false
+Skai,skai,bidding,hybrid,,"custom",50000,"enterprise commerce",2006,false,false
+Madgicx,madgicx,bidding,hybrid,39,"$39/mo",0,"SMB to mid-market, Meta-heavy",2018,false,false
+Smartly.io,smartly-io,creative,hybrid,,"enterprise",100000,"enterprise creative + bidding ops",2013,false,false
+WordStream,wordstream,bidding,rules,264,"$264/mo",0,"SMB Google Ads",2007,false,false
+Adzooma,adzooma,bidding,rules,0,"free tier",0,"SMB multi-platform",2018,true,false
+SEMrush PPC,semrush,research,tools,129,"$129/mo (bundled)",0,"SMB to mid-market",2008,false,false
+SpyFu,spyfu,research,tools,39,"$39/mo",0,"SMB to mid competitive intel",2005,false,false
+Adthena,adthena,research,real,,"custom",0,"enterprise share-of-search",2012,false,false
+Supermetrics,supermetrics,reporting,tools,39,"$39/mo",0,"all sizes",2009,false,false
+Looker Studio,looker-studio,reporting,tools,0,"free",0,"all sizes",2016,true,false
+Adalysis,adalysis,creative,tools,99,"$99/mo",0,"mid-market ad-copy testing",2013,false,false
+Acquisio,acquisio,bidding,hybrid,,"custom",0,"agencies serving local SMB",2003,false,false
+Pacvue,pacvue,bidding,real,,"enterprise",50000,"enterprise retail media",2018,false,false
+AdEspresso,adespresso,creative,rules,49,"$49/mo",0,"SMB Meta Ads",2013,false,false
+Trapica,trapica,bidding,hybrid,99,"$99/mo",0,"SMB to mid-market social",2014,false,false
+Albert AI,albert-ai,bidding,real,,"$50K+/mo",50000,"enterprise autonomous campaign mgmt",2010,false,false
+Pattern89,pattern89,creative,real,,"custom",25000,"enterprise creative-performance prediction",2015,false,false
+Persado,persado,creative,real,,"$250K+/yr",0,"enterprise NLP for brand language",2012,false,false
+Phrasee,phrasee,creative,hybrid,,"enterprise",25000,"enterprise email/push copy ML",2015,false,false
+Jasper,jasper,creative,llm,39,"$39/mo",0,"general AI copy",2021,false,false
+Anyword,anyword,creative,llm,39,"$39/mo",0,"general AI copy with performance scoring",2013,false,false
+NinjaCat,ninjacat,reporting,tools,,"custom",0,"agency white-label reporting",2013,false,false
+AgencyAnalytics,agencyanalytics,reporting,tools,49,"$49/mo",0,"agency multi-client reporting",2010,true,false
+DataFeedWatch,datafeedwatch,feed,tools,79,"$79/mo",0,"SMB ecom feed optimization",2013,false,false
+Feedonomics,feedonomics,feed,tools,,"enterprise",0,"enterprise ecom feed/channel mgmt",2014,false,false
+ChannelEngine,channelengine,feed,tools,,"custom",0,"multi-channel marketplace seller",2013,false,false
+Productsup,productsup,feed,tools,,"enterprise",0,"enterprise global product content",2010,false,false
